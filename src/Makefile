@@ -7,7 +7,7 @@ EXEC = compyler
 
 BLD_DIR = ../build
 EXEC = compyler
-OBJS = compyler.o
+OBJS = compyler.o token.o
 
 all: dir $(BLD_DIR)/$(EXEC)
 

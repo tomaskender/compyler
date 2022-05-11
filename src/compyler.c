@@ -1,5 +1,7 @@
-#include "include/token.h"
+#include "include/token_functions.h"
+#include "include/context_functions.h"
 #include "include/error.h"
+#include "include/types.h"
 
 #include <stdio.h>
 
@@ -10,8 +12,11 @@ int main() {
     context_init(&context);
 
     token_t *t;
+    int return_code;
     do {
-        token_load(&context, f, t);
-    } while(t->type != CMPLR_OK);
+        return_code = token_load(&context, f, &t);
+    } while(return_code == ERR_OK && t->type != TYPE_EOF);
+
+    context_deinit(&context);
     return 0;
 }

@@ -1,12 +1,10 @@
 #ifndef __CONTEXT_H__
 #define __CONTEXT_H__
 
-#include "error.h"
+#include "token.h"
 
 typedef struct ctx {
-    int state;
+    token_t *tokens_head;
 } ctx_t;
-
-int context_init(ctx_t *context) { return CMPLR_OK; }
 
 #endif

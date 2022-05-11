@@ -1,7 +1,9 @@
 #ifndef __ERROR_H__
 #define __ERROR_H__
 
-#define CMPLR_OK            0
-#define CMPLR_TOKEN_ERROR   1
+#define ERR_OK          0
+#define ERR_UNDEFINED   1
+#define ERR_SYNTAX      2
+#define ERR_MALLOC      3
 
 #endif
